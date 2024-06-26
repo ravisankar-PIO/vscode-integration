@@ -4,6 +4,7 @@
 - [1) Install the required extensions.](#1-install-the-required-extensions)
 - [2) Setup your local folder](#2-setup-your-local-folder)
 - [3) Connect to IBMi](#3-connect-to-ibmi)
+  - [.profile setup](#profile-setup)
 
 
 A setup guide to get started on VS Code and IBMi. This guide includes, 
@@ -111,6 +112,11 @@ It is important to setup a local folder if you wish to keep a copy of the source
    In order to have a deploy directory(where your source codes will be deployed), it is must to create your own user profile directory inside the /home directory in the IFS. You might be shown with this warning message if the home directory is not set correctly. The fix is to create a user_profile directory. If you're comfortbale with Shell command, you can use PASE (Ctrl + Shift + J from VS Code) to create a directory. The command is `mkdir /home/<your_ibmi_username>`. If you're comfortable with IBMi green screen, then you can issue a `MKDIR DIR('/home/<your_ibmi_username>')` CL command. I would suggest you to use lower case while creating your directory as UNIX Shell is case sensitive. 
    
 
+## .profile setup
+Once you have opened the VS Code, 
+```sh
+export PATH=/QOpenSys/pkgs/bin:$PATH
+```
 
 
 
